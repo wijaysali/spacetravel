@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Button, ToggleButton, ToggleButtonGroup } from "react-bootstrap";
 
 const StyledBootstrapButton = styled(Button)`
-  &&& {
+  && {
     color: ${props =>
       props.disabled ? props.theme.text2 : props.theme.background};
     background-color: ${props => props.theme.accent1};
@@ -17,7 +17,7 @@ const StyledBootstrapButton = styled(Button)`
     font-family: "Alegreya Sans SC", sans-serif;
   }
 
-  &&&&&:hover {
+  &&:hover {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     border-color: ${props =>
       props.disabled ? undefined : props.theme.foreground};
@@ -25,7 +25,7 @@ const StyledBootstrapButton = styled(Button)`
       props.disabled ? props.theme.text2 : props.theme.background};
   }
 
-  &&&&&:active {
+  &&:active {
     background-image: ${props => (props.disabled ? undefined : "unset")};
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
     border-color: ${props => props.theme.accent1};
@@ -33,7 +33,7 @@ const StyledBootstrapButton = styled(Button)`
     color: ${props =>
       props.disabled ? props.theme.text2 : props.theme.background};
   }
-  &&&&:focus {
+  &&:focus {
     outline: 0;
     box-shadow: none;
   }
@@ -47,7 +47,7 @@ export class KitButton extends Component {
 }
 
 const StyledBootstrapToggleButton = styled(ToggleButton)`
-  &&& {
+  && {
     color: ${props =>
       props.disabled ? props.theme.text1 : props.theme.background};
     background-color: ${props => props.theme.accent1};
@@ -69,7 +69,7 @@ export class KitToggleButton extends Component {
 }
 
 export const KitToggleButtonGroup = styled(ToggleButtonGroup)`
-  &&&& :active {
+  && :active {
     background-image: unset;
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
     border-color: ${props => props.theme.accent2};
@@ -78,7 +78,7 @@ export const KitToggleButtonGroup = styled(ToggleButtonGroup)`
       props.disabled ? props.theme.text2 : props.theme.background};
   }
 
-  &&&& .active {
+  && .active {
     background-image: unset;
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
     border-color: ${props => props.theme.accent2};
@@ -87,7 +87,7 @@ export const KitToggleButtonGroup = styled(ToggleButtonGroup)`
       props.disabled ? props.theme.text2 : props.theme.background};
   }
 
-  &&&& :focus {
+  && :focus {
     outline: 0;
     background-image: unset;
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.75);
@@ -97,7 +97,7 @@ export const KitToggleButtonGroup = styled(ToggleButtonGroup)`
       props.disabled ? props.theme.text2 : props.theme.background};
   }
 
-  &&& :hover {
+  && :hover {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     border-color: ${props => props.theme.accent3};
     color: ${props =>
